@@ -126,6 +126,7 @@ COMMENT ON TABLE elmasri.localizacoes_departamento IS 'Tabela que armazena as po
 COMMENT ON COLUMN elmasri.localizacoes_departamento.numero_departamento IS 'departamento.';
 COMMENT ON COLUMN elmasri.localizacoes_departamento.local IS 'Localização do departamento. Faz parte da PK desta tabela.';
 
+-- Nessa parte estará as implementações dos dados 
 INSERT INTO elmasri.departamento(
 	numero_departamento, nome_departamento, cpf_gerente, data_inicio)
 	VALUES (5, 'Pesquisa', 33344555587, '22-05-1988');
@@ -306,6 +307,8 @@ INSERT INTO elmasri.trabalha_em(
 INSERT INTO elmasri.trabalha_em(
 	cpf_funcionario, numero_projeto, horas)
 	VALUES (88866555576, 20, NULL);
+
+-- Por fim nessa parte estarei implementando as relações entre essas tabelas que é a formação em si das FK que fará o ligamento entre as tabelas
 
 ALTER TABLE elmasri.departamento ADD CONSTRAINT funcionario_departamento_fk
 FOREIGN KEY (cpf_gerente)
