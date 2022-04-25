@@ -43,7 +43,7 @@ CREATE UNIQUE INDEX projeto_idx1
 CREATE TABLE trabalha_em (
                 cpf_funcionario CHAR(11) NOT NULL,
                 numero_projeto INT NOT NULL,
-                horas DECIMAL(3,1) NOT NULL,
+                horas DECIMAL(3,1),
                 PRIMARY KEY (cpf_funcionario, numero_projeto)
 );
 
