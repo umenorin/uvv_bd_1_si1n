@@ -7,7 +7,6 @@
 ## Integrantes que me ajudaram em certas partes do projeto:
 * Izabelle Avena
 * João Paulo Ribeiro de Oliveira Neto
-* Bruno Sacth
 
  ## Requisitos mímimos para realizar esse Pset1
 * Ter um conhecimento básico sobre git
