@@ -1,10 +1,10 @@
 # uvv_bd_1_si1n
 ### Trabalho Pset1 da disciplina  Banco de Dados 
 
-## feito por:
+## Feito por:
 * Ruan Costa Oliveira
 
-## Integrantes do projeto:
+## Integrantes que me ajudaram em certas partes do projeto:
 * Izabelle Avena
 * João Paulo Ribeiro de Oliveira Neto
 * Bruno Sacth
@@ -16,8 +16,19 @@
 * Saber utilizar o prostgreSQL
 * Ter o conhecimento sobre markdown
 
+## Aplicativos ultlizados para realizar o Pset1
+* Dbeaver
+* MySQL/MariaBD
+* PGadmin4 (esse é o aplicativo usado para usar o postgres)
+* GIT
+* A plataforma Github para upar os arquivos do Pset1
+
 ## O que foi necessário para resolver as questões 1-3 do Pset1?
 
 Foi necessário estudar e pesquisar sobre o que é Git e o Github e como posso utilizar ele para realizar os meus projetos. Fora isso, precisei ter o conhecimento de quais formas é possivel ocorrer um **controle de versões** e o que é isso.
 
 ## O que foi necessário para resolver os exercícios 4-9 do Pset1?
+Foi necessário ter o conhecimento de analizar um projeto lógico para elaborar e resolver as questões
+
+## Oque foi necessário para resolver os exercícios 10-15 do Pset1?
+Para resolver essas questões finais, foi necessário saber o básio sobre Sistema de banco de dados e o que é as características mais importantes para um SBD funcionar corretamente
