@@ -1,6 +1,9 @@
 # Pset1
 ### Trabalho Pset1 da disciplina  Banco de Dados 
 
+## Resumo:
+ Este subdiretório é destinadofoi feito para registrar toda a documentação Pset1 durante a sua resolução.Este problem set foca em aprimorar e avaliar o conhecimento sobre Banco de Dados Relacionais e a Linguagem SQl,através de questões discursivas e implementação de um modelo de dados relacional em um SGBD,sendo utilizado neste _PSet_, _PostgreSQL_, _MySQL_ e o _Sql Power Architect_.
+ 
 ## Feito por:
 * Ruan Costa Oliveira
 
