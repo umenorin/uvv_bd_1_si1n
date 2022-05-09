@@ -1,3 +1,9 @@
+/* Comentário para o professor: Olá professor, esse Pset tinha uma questão repetida que é a 01 e 10, mas eu deixei a resposta nas duas, e outra coisa, quando eu tentei
+copiar e colar o código pelo commit, o meu MYsql não autorizou alguns SCRIPTs, porém quando eu coloquei isso em um bloco de notas rodou normalmente.
+E outra coisa, eu fiz esses SCRIPTs pelo MYsql, caso não rode no PostgreSQL.*\
+
+
+
 -- Questão 01
 SELECT nome_departamento, avg(salario)
 FROM funcionario AS f, departamento
