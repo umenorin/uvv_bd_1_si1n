@@ -11,7 +11,6 @@ WHERE sexo = "M"
 UNION
 SELECT sexo, AVG(salario)
 FROM funcionario
-END
 WHERE sexo = "F";
 
 -- Questão 03
