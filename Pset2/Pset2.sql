@@ -16,7 +16,7 @@ WHERE sexo = "F";
 -- Questão 03
 SELECT  nome_departamento,  primeiro_nome, nome_meio, ultimo_nome,
 data_nascimento, 2022 - year(data_nascimento), salario
-From  funcionario, departamento
+FROM  funcionario, departamento
 WHERE funcionario.numero_departamento = departamento.numero_departamento;
 
 -- Questão 04 
@@ -70,7 +70,7 @@ GROUP BY nome_departamento
 HAVING avg(salario);
 
 -- Questão 11
-SELECT primeiro_nome, nome_meio, ultimo_nome, p.nome_projeto, horas * 50 as valor_horas
+SELECT primeiro_nome, nome_meio, ultimo_nome, p.nome_projeto, horas * 50 as horas_trabalhadas
 FROM funcionario join projeto as p join trabalha_em as t on (p.numero_projeto = t.numero_projeto)
 WHERE funcionario.cpf = t.cpf_funcionario 
 ORDER BY funcionario.primeiro_nome;
@@ -78,7 +78,7 @@ ORDER BY funcionario.primeiro_nome;
 -- Questão 12
 SELECT  nome_departamento, nome_projeto, primeiro_nome
 FROM departamento, projeto, funcionario, trabalha_em
-WHERE trabalha_em.horas is null and trabalha_em.numero_projeto = projeto.numero_projeto and departamento.numero_departamento
+WHERE trabalha_em.horas IS NULL AND trabalha_em.numero_projeto = projeto.numero_projeto and departamento.numero_departamento
 = projeto.numero_departamento;
 
 -- Questão 13 
@@ -89,16 +89,13 @@ ORDER BY idade desc;
 
 -- Questão 14
 SELECT f.numero_departamento, d.nome_departamento, COUNT(*) AS total_por_departamento 
-FROM funcionario as f join departamento as d on (f.numero_departamento = d.numero_departamento)
+FROM funcionario AS f 
+JOIN departamento AS d ON (f.numero_departamento = d.numero_departamento)
 GROUP BY numero_departamento;
 
 -- Questão 15
 SELECT f.primeiro_nome, f.nome_meio, f.ultimo_nome, d.nome_departamento, p.nome_projeto
 FROM funcionario AS f 
-inner join departamento d on (d.cpf_gerente = f.cpf)
-inner join trabalha_em t on (t.cpf_funcionario = f.cpf)
-inner join projeto p on (p.numero_projeto = t.numero_projeto);
-
-
-
-
+INNER JOIN departamento d ON (d.cpf_gerente = f.cpf)
+INNER JOIN trabalha_em t ON (t.cpf_funcionario = f.cpf)
+INNER JOINn projeto p ON (p.numero_projeto = t.numero_projeto);
