@@ -53,9 +53,18 @@ WHERE funcionario.numero_departamento = departamento.numero_departamento AND
 dependente.cpf_funcionario = cpf;
 
 -- Questão 07
-SELECT primeiro_nome, nome_meio, ultimo_nome, salario, numero_departamento
-FROM funcionario
-WHERE cpf_supervisor IS NULL
+select concat(f.primeiro_nome,' ',f.nome_meio,' ',f.ultimo_nome) as Nome_completo,
+        f.numero_departamento as departamento,
+		dp.nome_departamento as  nome_departamento,
+        f.salario as salario
+        from funcionario f
+        inner join departamento dp
+        on f.numero_departamento = dp.numero_departamento
+        where not exists (
+			select * 
+            from dependente d 
+            where f.cpf=d.cpf_funcionario)
+            order by departamento;
 
 -- Questão 08
 SELECT nome_departamento, nome_projeto, primeiro_nome, nome_meio, ultimo_nome, horas
