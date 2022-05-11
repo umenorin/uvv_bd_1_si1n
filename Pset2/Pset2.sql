@@ -5,10 +5,10 @@ E outra coisa, eu fiz esses SCRIPTs pelo MYsql, caso não rode no PostgreSQL.*\
 
 
 -- Questão 01
-SELECT nome_departamento, avg(salario)
-FROM funcionario AS f, departamento
-GROUP BY nome_departamento
-HAVING avg(salario);
+SELECT numero_departamento, avg(salario)
+FROM funcionario
+GROUP BY numero_departamento;
+
 
 -- Questão 02
 SELECT sexo, AVG(salario) AS media_salarial
@@ -75,8 +75,10 @@ AND funcionario.numero_departamento = departamento.numero_departamento
 ORDER BY departamento.numero_departamento, nome_projeto, primeiro_nome;
 
 -- Questão 09
-SELECT  nome_departamento, nome_projeto, SUM(horas) AS total_horas
-FROM projeto, departamento, trabalha_em;
+SELECT  p.nome_projeto, d.nome_departamento, SUM(horas)
+ FROM projeto p, departamento d, trabalha_em
+ WHERE p.numero_departamento = d.numero_departamento AND trabalha_em.numero_projeto = p.numero_projeto
+ GROUP BY p.nome_projeto;
 
 -- Questão 10
 SELECT nome_departamento, avg(salario)
